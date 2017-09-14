@@ -3,6 +3,7 @@
         <title>
             ChatIO
         </title>
+        <link rel="stylesheet" href="/bootstrap.css">
         <style>
             body{
                 background: #f9f9f9;
@@ -54,6 +55,7 @@
             input{
                 height:30px;
             }
+
         </style>
     </head>
     <body>
@@ -67,23 +69,27 @@
                     <input type="submit" value="submit">
                 </form>
             </div>
-            <div class="" id="mainWrapper">
-                <h2>ChatIO</h2>
-                <div class="" id="chatWrapper">
-                    <div class="" id="chatWindow">
+            <div class="container">
+                <div class="col-md-12" id="mainWrapper">
+                    
+                    <div class="col-md-6 col-md-offset-2" id="chatWrapper">
+                    <h2>ChatIO</h2>
+                        <div class="" id="chatWindow">
+                        </div>
+                        <form action="" id="messageForm">
+                            <input id="message" size="35" minlength="1"  placeholder="Type Something.....">
+                            <input type="submit" value="Say It!">
+                        </form>
+
                     </div>
-                    <form action="" id="messageForm">
-                        <input id="message" size="35" minlength="1"  placeholder="Type Something.....">
-                        <input type="submit" value="Say It!">
-                    </form>
+                    <div class="col-md-2" id="userWrapper">
+                        <div class="" id="users">
 
-                </div>
-                <div class="" id="userWrapper">
-                    <div class="" id="users">
-
+                        </div>
                     </div>
                 </div>
             </div>
+            
         </div>
         <script src= 'jquery.js'></script>
         <script src="socket.io.js"></script>
