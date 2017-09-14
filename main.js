@@ -7,6 +7,10 @@ $(function(){
 
    $messageForm.submit(function(e){
        e.preventDefault();
+       alert(message.val())
+       if(message.val() == ''){
+        alert('empty message');
+       }
        console.log('sending message from frontend');
        socket.emit('send message', $message.val());
        message.val('');

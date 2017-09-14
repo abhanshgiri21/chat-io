@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-usernames = [];
+usernames = [''];
 
 app.use(express.static(path.join(__dirname, 'js')));
 
@@ -37,7 +37,13 @@ io.sockets.on('connection', function(socket){
 
     //Send message
     socket.on('send message', function(data){
-        io.sockets.emit('new message', {msg: data, user: socket.username});
+        console.log(data);
+        if(data == ''){
+            io.sockets.emit('fadf');
+        }else{
+            console.log('else condition tru')
+            io.sockets.emit('new message', {msg: data, user: socket.username});
+        }
 
     });
 
